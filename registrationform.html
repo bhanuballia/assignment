@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+</head>
+<body>
+
+    <header>
+        <h1>Course Registration</h1>
+    </header>
+
+    <main>
+        <form action="/submit-registration" method="post" enctype="multipart/form-data">
+
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <p>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Bhanu Pratap Singh" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="bhanu@example.com" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="0000000000">
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </p>
+                <p>
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                </p>
+            </fieldset>
+
+            <!-- Academic Background Section -->
+            <fieldset>
+                <legend>Academic Background</legend>
+
+                <p>
+                    <label for="education-level">Current Education Level:</label>
+                    <select id="education-level" name="education-level">
+                        <option value="">-- Select --</option>
+                        <option value="high-school">High School</option>
+                        <option value="bachelors">Bachelor's</option>
+                        <option value="masters">Master's</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </p>
+                 <p>
+                    <label for="field-of-study">Field of Study:</label>
+                    <input type="text" id="field-of-study" name="field-of-study" placeholder="Computer Science">
+                </p>
+
+                <p>
+                    <label for="experience">Years of Experience in Programming:</label>
+                    <input type="number" id="experience" name="experience" min="0" max="20" placeholder="e.g., 5">
+                </p>
+            </fieldset>
+
+            <!-- Course Preferences Section -->
+            <fieldset>
+                <legend>Course Preferences</legend>
+
+                <p>Preferred Learning Mode:</p>
+                 <p>
+                    <input type="radio" id="mode-online" name="learning-mode" value="online">
+                    <label for="mode-online">Online</label>
+                    <input type="radio" id="mode-offline" name="learning-mode" value="offline">
+                    <label for="mode-offline">Offline</label>
+                    <input type="radio" id="mode-hybrid" name="learning-mode" value="hybrid">
+                    <label for="mode-hybrid">Hybrid</label>
+                </p>
+
+                <p>Course Categories:</p>
+                <p>
+                    <input type="checkbox" id="cat-webdev" name="course-category" value="web-development">
+                    <label for="cat-webdev">Data Science</label><br>
+                    <input type="checkbox" id="cat-mobile" name="course-category" value="mobile-app-development">
+                    <label for="cat-mobile">Quantum Computing</label><br>
+                    <input type="checkbox" id="cat-datasci" name="course-category" value="data-science">
+                    <label for="cat-datasci">Data Analyst</label><br>
+                    <input type="checkbox" id="cat-ai" name="course-category" value="ai-ml">
+                    <label for="cat-ai">AI/ML</label><br>
+                    <input type="checkbox" id="cat-devops" name="course-category" value="devops">
+                    <label for="cat-devops">MERN Stack Development</label>
+                </p>
+                <p>Preferred Schedule:</p>
+                <p>
+                    <input type="radio" id="sched-weekdays" name="schedule" value="weekdays">
+                    <label for="sched-weekdays">Weekdays</label>
+                    <input type="radio" id="sched-weekends" name="schedule" value="weekends">
+                    <label for="sched-weekends">Weekends</label>
+                    <input type="radio" id="sched-flexible" name="schedule" value="flexible">
+                    <label for="sched-flexible">Flexible</label>
+                </p>
+            </fieldset>
+
+            <!-- Additional Information Section -->
+            <fieldset>
+                <legend>Additional Information</legend>
+
+                <p>
+                    <label for="prog-exp">Programming Experience Level: <span id="exp-level-val">5</span></label>
+                    <input type="range" id="prog-exp" name="programming-experience" min="1" max="10" value="5" oninput="document.getElementById('exp-level-val').textContent = this.value">
+                </p>
+                <p>
+                    <label for="comments">Special Requirements or Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Any special needs or comments you have..."></textarea>
+                </p>
+
+                <p>Preferred Contact Method:</p>
+                <p>
+                    <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+                    <label for="contact-email">Email</label>
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                    <input type="radio" id="contact-sms" name="contact-method" value="sms">
+                    <label for="contact-sms">SMS</label>
+                </p>
+            </fieldset>
+
+            <p class="form-buttons">
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025  MASAI Online Learning Platform. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+            
