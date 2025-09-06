@@ -1,0 +1,14 @@
+Key features of this implementation:
+registration.html: The file uses the specified filename.
+Semantic Structure: The code uses <header>, <main>, <form>, <fieldset>, <legend>, and <footer> for a logical, semantic structure.
+Form Attributes: The <form> element includes action="/submit-registration", method="post", and enctype="multipart/form-data" to handle the file upload correctly.
+Input Validation:
+required is used for mandatory fields (Full Name, Email, and Terms).
+type="email" automatically validates for an email format.
+type="number" with min="0" and max="20" enforces the experience range.
+type="date" provides a date picker for easier input.
+type="file" with accept="image/*" restricts file selection to image types.
+Labels and Accessibility: Every input has a corresponding <label> with a for attribute matching the input's id. This links the label to the input, improving accessibility and user experience.
+Field Grouping: fieldset and legend are used to logically group related form elements, making the form easier to read and understand.
+Dynamic Range Slider: A small JavaScript snippet is added to update the display value of the programming experience slider in real-time, providing immediate feedback to the user.
+Buttons: The form includes both a submit and reset button.
